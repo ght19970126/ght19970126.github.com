@@ -1,220 +1,301 @@
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>旅游网站</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+<html lang="en">
+<head>
+	<meta charset="UTF-8">	
+	<title>我的个人主页</title>
+    <script type="text/javascript" src="js/code.js"></script>
+<!-- 	<script type="text/javascript" src="js/time.js"></script>
+ -->	<style>
+	body,ul,li,p,h5,img,a,h4{
+		padding: 0px;margin: 0px;
+	}
+	body{
+		background: #099;
+		font: 12px/1.5em;
+	}
+	.banner img{
+			vertical-align: top;
+		}
+		.links{
+			overflow: hidden;
+			background: #3cf;
+		}
+		.links ul{
+			list-style: none;
+		}
+		.links ul li{
+			float: right;
+			text-align: center;
+			width:70px;
+		}
+		.links li a{
+			display: block;
+			text-decoration: none;
+			padding: 0px 2px;
+		}
+		.links li a:hover{
+			background: #063;
+			color: #fff;
+			text-decoration: none;	
+		}
+	    .leftbanner{
+		background: #fff;
+		position: fixed;
+		left:0px;
+		top: 150px;
+    	}
+	    .rightbanner{
+		background: #fff;
+		position: fixed;
+		right:0px;
+		top: 150px;
+    	}
+		.container{
+			overflow: hidden;
+			background: #fff;
+			width: 760px;
+			margin: 0px auto;
+/*			border: 1px dashed #fff;
+*/		}
+		.leftbar{
+			float: left;
+			width: 200px;
+		}
+		#nav{
+		text-align: center;
+    	height: 130px;
+   		width: 220px;	
+    	}
+   	#nav div{
+    	text-align: left;
+    	background: #fff;
+    	color: #33c;
+    	width: 200px;
+    	height: 120px;
+    	display: none;
+    	margin-left: 10px;
+    	}
+    .active{
+    	background: #f00;
+    	color: #fff;
+    	}
+		.div1{
+			background:url(img/mypic_bg.gif);
+		}
+		.container .leftbar .div1 .contentp1{
+			text-align: center;
+			border:1px dotted #000;
+			margin: 5px 5px 2px;
+			text-align: center;
+			padding-top: 10px;
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+		}
+		.contentp2{
+			border-top: 1px dashed #666;
+			border-bottom: 1px dashed #666;
+			margin: 4px 5px;
+			text-align: center;
+		}
+		.huodong,.wode,.guanyu,.haoyou{
+			background:url(img/leftbg.jpg);
+			padding: 2px;
+		}
+		.leftbar ul{
+			overflow: hidden;
+			list-style: none;
+		}
+		.div2{
+			overflow: hidden;
+		}
+		.leftbar ul .tubiao1{
+			list-style: url(img/1.gif);
+			margin-left: 26px;
+		}
+		.leftbar ul .tubiao2{
+			list-style: url(img/2.gif);
+			margin-left: 26px;
+		}
+		.leftbar ul .tubiao3{
+			list-style: url(img/3.gif);
+			margin-left: 26px;
+		}
+		.leftbar ul .tubiao4{
+			list-style: url(img/4.gif);
+			margin-left: 26px;
+		}
+		.leftbar ul .tubiao5{
+			list-style: url(img/5.gif);
+			margin-left: 26px;
+		}
+		.leftbar ul .tubiao6{
+			list-style: url(img/6.gif);
+			margin-left: 26px;
+		}
+		.leftbar .ul1 li{
+			float: left;
+			text-align: center;
+			width: 74px;
+		}
+		.leftbar .ul1 li a{
+			display: block;
+		text-decoration: none;
+		}
+		.leftbar .ul1 li a:hover{
+			background: #09f;
+			color: #fff;
+		}
+		.div3{
+			overflow: hidden;
+		}
+		.tubiao7{
+			list-style: url(img/icon1.gif);
+			margin-left: 15px;
+		}
+		.ul2 a{
+			text-decoration: none;
+		}
+		.ul2 li{
+			border-bottom:1px dashed #666;
+		}
+		.leftbar .ul2 li a:hover{
+			background: #09f;
+			color: #fff;
+		}
+		.content{
+			float: left;
+		    width: 460px;
+		    margin: 20px;
+		    padding-left: 25px;
+		}
+		.contenta{
+			text-decoration: none;
+		}
+	    .container .diary h4{
+			border-bottom: 1px dotted #000;
+		}
+		.contentp{
+			text-align: right;
+		}
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Superfish -->
-	<link rel="stylesheet" href="css/superfish.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-
-	<link rel="stylesheet" href="css/style.css">
-
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
-	<body>
-		<div id="fh5co-wrapper">
-		<div id="fh5co-page">
-		<div id="fh5co-header">
-			<header id="fh5co-header-section">
-				<div class="container">
-					<div class="nav-header">
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="index.html"><i class="icon-home2"></i>这是一个旅游网站</a></h1>
-						<!-- START #fh5co-menu-wrap -->
-						<nav id="fh5co-menu-wrap" role="navigation">
-							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li>
-									<a class="active" href="index.html">首页</a>
-								</li>
-								<li><a href="hangzhou.html">杭州</a></li>
-								<li class="dropdown">
-										<a href="script:javascript" class="dropdown-toggle" data-toggle="dropdown">天津</a>
-										<ul class="dropdown-menu agile_short_dropdown">
-											<li><a href="tianjin1.html">天津之眼</a></li>
-											<li><a href="tianjin2.html">天津方特</a></li>
-										</ul>
-									</li>
-								<li><a href="wuxi.html">无锡</a></li>
-								<li><a href="contact.html">苏州</a></li>
-								<li><a href="shanghai.html">上海</a></li>
-								<li><a href="lianxi.html">联系</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</header>		
+		.footer{
+			float: left;
+			width: 760px;
+			background: #a7b3a6;
+			text-align: center;
+		}		
+        #imgimg{  
+            overflow: hidden;
+			   cursor:pointer;
+	    }
+        #imgimg{
+      	transform:scale(1,1);
+        }
+        #imgimg{
+      	transition:transform 0.2s ease-in 0s;
+        }
+        #imgimg:hover{
+      	transform: scale(2,2);
+        }
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="banner"><img id="imgimg" src="img/banner11.jpg"/></div>
+	<div class="links"><ul>
+	    <li><a href="liuyan.html">给我留言</a></li>
+		<li><a href="xiaoqiuyidong.html">我的作品</a></li>
+    	<li><a href="mingyan.html">励志名言</a></li>
+	    <li><a href="xiangce.html">我的相册</a></li>
+    	<li><a href="xinqingriji.html">个人感慨</a></li>
+	    <li><a href="index.html">个人首页</a></li></ul>
+	</div>
+	<div class="leftbar">
+		<div class="div1">
+			<p class="contentp1"><img id="imgimg" src="img/mypic1.jpg"/></p>
+			<p class="contentp2">郭海涛的个人主页</p>
 		</div>
-		<!-- end:fh5co-header -->
-		<aside id="fh5co-hero" class="js-fullheight">
-			<div class="flexslider js-fullheight">
-				<ul class="slides">
-			   	<li style="background-image: url(images/index01.jpg);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container">
-			   			<div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
-			   				<div class="slider-text-inner">
-			   					<div class="desc">
-			   						<h2>不为跋涉千里的向往,只为漫无目的的闲逛。</h2>
-			   					</div>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/index02.jpg);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container">
-			   			<div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
-			   				<div class="slider-text-inner">
-			   					<div class="desc">
-			   						<h2>不为人山人海的名胜,只为怡然自乐的街景。</h2>
-			   					</div>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/index03.jpg);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container">
-			   			<div class="col-md-5 col-sm-6 col-xs-12 js-fullheight slider-text">
-			   				<div class="slider-text-inner">
-			   					<div class="desc">
-			   						<h2>或走,或停,原则就是看心情。</h2>
-			   					</div>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li>
-			  	</ul>
-		  	</div>
-		</aside>
-		<div id="fh5co-section">
-			<div class="grid-project-section">
-				<a href="hangzhou.html">
-					<img src="images/index04.jpg" alt="Project" class="img-responsive">
-					<div class="desc text-center">
-						<h2>杭州</h2>
-					</div>
-				</a>
-			</div>
-			<div class="grid-project-section">
-				<a href="suzhou.html">
-					<img src="images/index05.jpeg" alt="Project" class="img-responsive">
-					<div class="desc text-center">
-						<h2>苏州</h2>
-					</div>
-				</a>
-			</div>
-			<div class="grid-project-section">
-				<a href="shanghai.html">
-					<img src="images/index06.jpg" alt="Project" class="img-responsive">
-					<div class="desc text-center">
-						<h2>上海</h2>
-					</div>
-				</a>
-			</div>
+		
+		<div id="nav">
+    	<input class="active" type="button" value="个人信息">
+    	<input type="button" value="我在学校">
+    	<input type="button" value="我的爱好">
+    	<div style="display: block;"><p>姓名：郭海涛</p><p>性别：男</p><p>出生年月：1997-01-26</p><p>籍贯：河北沧州</p><p>政治面貌：团员</p></div>
+     	<div><p>学校：河北科技师范学院</p><p>学院：教育学院</p><p>专业：计算机多媒体技术</p><p>班级：1502</p><p>学号：1922150225</p></div>
+    	<div><p>体育运动：乒乓球</p><p>休闲爱好：听歌、读书</p><p>一般爱好：赖床</p><p>普通爱好：兜风</p><p>最喜爱的：吃吃吃</p></div>
+        </div>
+        <br>
+ <div class="div2">
+			<h5 class="huodong">&nbsp;&nbsp;活动地带</h5>
+			<ul class="ul1">
+				<li class="tubiao1"><a href="index.html">个人首页</a></li>
+				<li class="tubiao2"><a href="xinqingriji.html">个人感慨</a></li>
+				<li class="tubiao3"><a href="xiangce.html">我的相册</a></li>
+				<li class="tubiao4"><a href="mingyan.html">励志名言</a></li>
+				<li class="tubiao6"><a href="xiaoqiuyidong.html">我的作品</a></li>
+				<li class="tubiao5"><a href="liuyan.html">给我留言</a></li>
+			</ul>
 		</div>
-		<footer>
-			<div id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-5">
-							<h3 class="section-title">旅游动态</h3>
-							<ul>
-								<li><a href="script:javascript">游天津名人故居 品津城百年历史</a></li>
-								<li><a href="script:javascript">天津旅游市场复苏赏花游升温 境外游短线受追捧</a></li>
-								<li><a href="script:javascript">杨浦区举办《上海市旅游条例》培训讲座</a></li>
-								<li><a href="script:javascript">市旅游局发动“全城报春” 沪300万人关注角落里的春景</a></li>
-								<li><a href="script:javascript">旅游局2019“探访上海最美春天”网络发布会举行</a></li>
-								<li><a href="script:javascript">2019中国新型旅游产业发展大会9月在杭州召开</a></li>
-							</ul>
-						</div>
-						<div class="col-md-2">
-						</div>
-						<div class="col-md-5">
-							<h3 class="section-title">旅游报名</h3>
-							<ul class="contact-info">
-								<li><i class="icon-map2"></i><a href="script:javascript">地址：河北省秦皇岛市河北科技师范学院</a></li>
-								<li><i class="icon-phone2"></i><a href="script:javascript">电话：+ 13333333333</a></li>
-								<li><i class="icon-envelope2"></i><a href="script:javascript">邮箱：boy58565856@qq.com</a></li>
-								<li><i class="icon-globe2"></i><a href="script:javascript">网址：www.lvyouwangzhan.com</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="row copy-right">
-						<div class="col-md-6 col-md-offset-3 text-center">
-							<p>Copyright &copy; 2019.PengJinLong All rights reserved.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	
+		<br>
+		<div class="div4">
+			<h5 class="guanyu">关于我爱的WWE</h5>
+			<ul class="ul2">
+				<li class="tubiao7"><a href="shuaijiaojianjie.html">摔角简介</a></li>
+				<li class="tubiao7"><a href="shuaijiaoshoujieshao.html">摔角手介绍</a></li>
+				<li class="tubiao7"><a href="xinwen.html">摔角新闻</a></li>
+				<li class="tubiao7"><a href="zixun.html">摔角资讯</a></li>
+			</ul>
+		</div>
+ 	</div>
+	<div class="content">
+       <div class="diary">
+       	<h4 class="biaoti"><a href="xinqingriji.html" class="contenta">个人感慨</a></h4>
+       	<p class="contentp"> @ 2017-12-20 16:54:07</p><br>
+       	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二零一五年秋，走入校就业，感谢乐乐姐@连乐乐部长 晓荣姐@部长衡晓荣。 的赏识，大一一年，有佳伟学长@商佳伟 的带领，最感动张晨曦@张哈哈 尹晓雯@16教技尹晓雯 张澄澄@智障张澄澄 大二一年，感谢N多人让我留在校就业，感<a href="xinqingriji.html" class="contenta">查看更多</a>
+       	<!-- 璐璐姐@秘书部 张璐璐 张瑜姐@张瑜 指引的方向，大三，更感谢更多的人让我留在就业，为就业继续付出，时至今日，我在校就业的最后一个大型活动已经圆满结束，从大一到现在，五个大活动，部长的带领，主席的指引，最后才是自己的努力，感谢人很多，在其职，做其事，你自己努力问心无愧最踏实了，2017.12.06最后一个大活动，傍晚哭的稀里哗啦，舍不掉的很多，爱的人也很多，看着一届一届的学弟学妹这么努力倍感自豪，校就业每个人都是最牛逼的的，服务部什么的最牛逼了还有很多没有@到的人，感谢一路来的支持与帮助，剩余的时间，我还会秉承“用心去做事，用行动去为大家服务”（一句话说了三年，但我做到了）的原则，为大家树立最后的榜样 --></p><br>
+       	<div><p><a href="xinqingriji.html"><img id="imgimg" src="img/001.jpg" width="140px"/></a>&nbsp;<a href="xinqingriji.html"><img id="imgimg" src="img/0022.jpg" width="140px"/></a>&nbsp;<a href="xinqingriji.html"><img id="imgimg" src="img/003.jpg" width="140px"/></a></p></div>
+       </div>
+       <br><br>
+       <div class="diary">
+       	<h4 class="biaoti"><a href="xiangce.html" class="contenta">我的相册</a></h4>
+       	<p class="contentp">  2017-9-26 09:55:15</p><br><br>
+       	<p><a href="xiangce.html"><img src="img/007.jpeg" width="140px"/></a>&nbsp;<a href="xiangce.html"><img src="img/008.jpeg" width="140px"/></a>&nbsp;<a href="xiangce.html"><img src="img/009.jpeg" width="140px"/></p><br></a><a href="xiangce.html" class="contenta">查看更多图片</a>
+       </div>
+       <br><br>
+       <div class="diary">
+       	<h4 class="biaoti"><a href="mingyan.html" class="contenta">励志名言</a></h4>
+       	<p class="contentp">  2017-5-16 14:24:56</p><br>
+       	<p>1.真正的才智是刚毅的志向。 —— 拿破仑 <br>
+        2.感情有着极大的鼓舞力量，因此，它是一切道德行为的重要前提，谁要是没有强烈的志向，也就不能够热烈地把这个志向体现于事业中。 —— 凯洛夫<br>
+3.勇敢坚毅真正之才智乃刚毅之志向。 —— 拿破仑<br>
+4.生活赋予我们一种巨大的和无限高贵的礼品，这就是青春：充满着力量，充满着期待志愿，充满着求知和<a href="mingyan.html" class="contenta">查看更多</a>
+<!-- 斗争的志向，充满着希望信心和青春。 —— 奥斯特洛夫斯基<br>
+5.志向不过是记忆的奴隶，生气勃勃地降生，但却很难成长。 —— 莎士比亚<br>
+6.人所缺乏的不是才干而是志向，不是成功的能力而是勤劳的意志。 —— 部尔卫<br>
+7.当教师把每一个学生都理解为他是一个具有个人特点的、具有自己的志向、自己的智慧和性格结构的人的时候，这样的理解才能有助于教师去热爱儿童和尊重儿童。 —— 赞科夫<br> -->
+</p><br>
+       	<p><a href="mingyan.html"><img src="img/004.jpg" width="150px"/></a>&nbsp;<a href="mingyan.html"><img src="img/005.jpg" width="150px"/></a>&nbsp;<a href="mingyan.html"><img src="img/006.jpg" width="150px"/></a></p>
+       </div>
+
+
 
 	</div>
-	<!-- END fh5co-page -->
-
-	</div>
-	<!-- END fh5co-wrapper -->
-
-	<!-- jQuery -->
-
-
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Superfish -->
-	<script src="js/hoverIntent.js"></script>
-	<script src="js/superfish.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-
-	<!-- Main JS (Do not remove) -->
-	<script src="js/main.js"></script>
-
-	</body>
+	<div class="footer">&copy;1997-2018copyright&nbsp;&nbsp;果还套儿&nbsp;版权所有&nbsp;&reg;</div>
+</div>
+<div class="leftbanner">
+	<img src="img/left.gif" alt="">
+</div>
+<div class="rightbanner"><img src="img/right.gif" alt="">
+</div>
+</body>
+<!-- <script type="text/javascript">
+	window.onload=function(){
+	var div1=document.getElementById("div1");
+	function showTime(){
+		var myDate=new Date();
+		div1.innerHTML=myDate.toLocaleString();
+	}
+	showTime();
+	setInterval(showTime,1000);
+}
+</script> -->
 </html>
-
